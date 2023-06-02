@@ -12,6 +12,6 @@ do
 	count=$(grep -o "<diagram" "$file.xml" | wc -l)
 	rm "$file.xml"
 	for ((i = 0 ; i <= $count-1; i++)); do
-	drawio "$file.drawio" --no-sandbox --export --page-index $i --output "$file-$i.png"
+	drawio "$file.drawio" --no-sandbox --export --page-index $i --output "/devops/output/$file-$i.png"
 	done
 done
